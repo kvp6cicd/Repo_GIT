@@ -1,23 +1,18 @@
 package qagrpId;
 
-import org.testng.annotations.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.WebElement;
-
-
-import Utilities.BaseTest;
-import Utilities.Driver;
-import Utilities.Configuration;
-
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.BeforeTest;
-
 import java.io.IOException;
 import java.util.List;
+import org.testng.Assert;
+import org.testng.annotations.*;
+import org.testng.asserts.*;
 
-import org.testng.annotations.AfterTest;
+import utils.BaseTest;
+import utils.Configuration;
+import utils.Driver;
 
 
 public class NewTest1 {

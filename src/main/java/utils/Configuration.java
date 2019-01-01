@@ -1,6 +1,9 @@
-package Utilities;
+package utils;
 
-public class Configuration {
+import java.io.IOException;
+import java.lang.*;
+
+public final class Configuration {
 	
 	public static class browser{
 		// public static  String Browsername = null;

@@ -1,4 +1,4 @@
-package Utilities;
+package utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,17 +8,23 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.*;
-import org.junit.Assert;
-import org.testng.asserts.*;
+import org.testng.*;
+import utils.Configuration.browser;
 
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import Utilities.Configuration;
+import org.testng.Assert;
+import org.testng.annotations.*;
+import org.testng.asserts.*;
+
+import utils.BaseTest;
+import utils.Configuration;
+
 
 public class Driver {
 public static WebDriver instance = null;
@@ -29,14 +35,14 @@ public static WebDriver instance = null;
   public static void initialize  () throws IOException
 	{
 	  
- Properties prop = new Properties();
+/* Properties prop = new Properties();
  FileInputStream FS =  new FileInputStream("C:\\Users\\kmath.ORADEV\\E2EProject\\src\\main\\java\\Utilities\\config.properties");
- prop.load(FS);
+ prop.load(FS);*/
  //browser = prop.getProperty("browsername");
  //System.out.println("browser =" + browser );
  
  
- if ("chrome".equalsIgnoreCase(Utilities.Configuration.browser.Browsername))
+ if ("chrome".equalsIgnoreCase(utils.Configuration.browser.Browsername))
 	  {
 	 System.setProperty("webdriver.chrome.driver","D:\\Softwares\\chromedriver_win32\\chromedriver.exe");
 	 ChromeOptions chromeOptions = new  ChromeOptions();
@@ -48,7 +54,7 @@ public static WebDriver instance = null;
 	  instance =  new ChromeDriver ();
 	 
 	  }
- else if  ("FF".equalsIgnoreCase(Utilities.Configuration.browser.Browsername))
+ else if  ("FF".equalsIgnoreCase(utils.Configuration.browser.Browsername))
 {
 	 System.out.println("Firefox") ;
  }
